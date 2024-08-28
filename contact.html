@@ -4,70 +4,87 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contacts</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="experience.css" />
-    <link rel="stylesheet" href="Education.css" />
-    <link rel="stylesheet" href="contact.css" />
-    <style>
-      .contact-container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
-      .contactd {
-        max-width: 50%;
-      }
-      .profile-img {
-        margin-right: 10%;
-        border-radius: 50%;
-        height: 400px; /* Increased size */
-        width: 400px; /* Increased size */
-        object-fit: cover; /* Ensures the image covers the circle */
-      }
-    </style>
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
   </head>
-  <body>
-    <div class="portfolio">
-      <div class="header">
-        <div class="logo"><h3>&ltPooja Sahdev/&gt</h3></div>
-
-        <div class="navbar">
-          <a href="index.html">Home</a>
-          <a href="Education.html">Education</a>
-          <a href="experience.html">Experience</a>
-
-          <a href="project.html" style="font-weight: 600">Projects</a>
-          <a href="contact.html">Contact Me</a>
+  <body class="bg-gray-100">
+    <!-- Header with Navbar -->
+    <header class="bg-white shadow-md">
+      <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="text-2xl font-bold text-indigo-600">&lt;Pooja Sahdev/&gt;</div>
+        <nav class="hidden md:flex space-x-6">
+          <a href="index.html" class="text-gray-600 hover:text-indigo-600">Home</a>
+          <a href="Education.html" class="text-gray-600 hover:text-indigo-600">Education</a>
+          <a href="experience.html" class="text-gray-600 hover:text-indigo-600">Experience</a>
+          <a href="project.html" class="text-gray-600 hover:text-indigo-600 font-semibold">Projects</a>
+          <a href="contact.html" class="text-gray-600 hover:text-indigo-600">Contact Me</a>
+        </nav>
+        <!-- Mobile Menu Toggle -->
+        <div class="md:hidden flex items-center">
+          <button id="menu-btn" class="text-gray-600 focus:outline-none focus:text-indigo-600">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+          </button>
         </div>
       </div>
-    </div>
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden px-6 py-4">
+        <a href="index.html" class="block text-gray-600 hover:text-indigo-600 py-2">Home</a>
+        <a href="Education.html" class="block text-gray-600 hover:text-indigo-600 py-2">Education</a>
+        <a href="experience.html" class="block text-gray-600 hover:text-indigo-600 py-2">Experience</a>
+        <a href="project.html" class="block text-gray-600 hover:text-indigo-600 py-2 font-semibold">Projects</a>
+        <a href="contact.html" class="block text-gray-600 hover:text-indigo-600 py-2">Contact Me</a>
+      </div>
+    </header>
 
-    <div class="eduction" style="margin-left: 2%; margin-top: 5%; margin-right: 2%">
-      <div class="contact-container">
-        <div class="contactd" style="max-width: 50%">
-          <h1>Contact Me</h1>
-          <p style="color: #7f8daa">
-            My projects make use of a vast variety of the latest technology tools. My
-            best experience is to create Data Science projects and deploy them to
-            web applications using cloud infrastructure.
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+      <div class="flex flex-col md:flex-row items-center md:space-x-12 bg-white shadow-md rounded-lg p-6">
+        <!-- Contact Information -->
+        <div class="md:w-1/2 text-center md:text-left mb-8 md:mb-0">
+          <h1 class="text-4xl font-bold text-gray-800 mb-4">Contact Me</h1>
+          <p class="text-lg text-gray-600 mb-6">
+            I specialize in creating Data Science projects and deploying them to web applications using cloud infrastructure. Feel free to reach out for collaborations or inquiries.
           </p>
-          <div class="social-logo">
-            <a href="https://github.com/Pooja-sahdevram/"><img src="git.png" style="height: 40px; width: 40px" /></a>
-            <a href="https://www.instagram.com/poo_ja.2121/"><img src="instra.png" style="height: 40px; width: 40px" /></a>
-            <a href="https://www.linkedin.com/in/pooja-sahdev-ram-b7a649239/"><img src="link.png" style="height: 40px; width: 40px" /></a>
-          </div>
-          <div class="Share" style="margin-top: 5%; font-size: 20px; padding: 0">
-            <a href="https://drive.google.com/file/d/1bbAgR8FWtLXpiRkATYGYT4_2--XDt-9Y/view?usp=sharing">See My Resume </a>
+          <!-- Social Icons -->
+          <div class="flex justify-center md:justify-start space-x-6">
+            <a href="https://github.com/Pooja-sahdevram/" class="hover:text-gray-700">
+              <img src="git.png" class="h-10 w-10" alt="GitHub" />
+            </a>
+            <a href="https://www.instagram.com/poo_ja.2121/" class="hover:text-gray-700">
+              <img src="instra.png" class="h-10 w-10" alt="Instagram" />
+            </a>
+            <a href="https://www.linkedin.com/in/pooja-sahdev-ram-b7a649239/" class="hover:text-gray-700">
+              <img src="link.png" class="h-10 w-10" alt="LinkedIn" />
+            </a>
           </div>
         </div>
-        <img src="x.png" alt="Profile Picture" class="profile-img" />
+        <!-- Profile Image -->
+        <div class="md:w-1/2 flex justify-center">
+          <img src="x.png" alt="Profile Picture" class="rounded-full h-64 w-64 object-cover shadow-lg" />
+        </div>
       </div>
-    </div>
 
-    <div class="footer">
-      <p style="text-align: center; color: rgb(84, 84, 104); font-size: 25px; margin-top: 5%; margin-bottom: 2%">
-        Made with ❤️ by Pooja Sahdev
-      </p>
-    </div>
+      <!-- Resume Link -->
+      <div class="text-center mt-12">
+        <a href="https://drive.google.com/file/d/1bbAgR8FWtLXpiRkATYGYT4_2--XDt-9Y/view?usp=sharing" class="text-indigo-600 hover:text-indigo-800 font-semibold text-lg">See My Resume</a>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-10 py-6 bg-white text-center">
+      <p class="text-gray-600">Made with ❤️ by Pooja Sahdev</p>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu Toggle -->
+    <script>
+      const menuBtn = document.getElementById('menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    </script>
   </body>
 </html>
